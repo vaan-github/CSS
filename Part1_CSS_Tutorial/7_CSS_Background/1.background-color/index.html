@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* Opacity / Transparency Issue */
+        #opacity{
+            background-color: red;
+
+            /* The Child elements also effected. */
+            opacity: 0.3;
+        
+        }
+
+        #rgba{
+            /* Child elements not effected. */
+            background-color: rgba(255,0,0,0.3);
+            
+        }
+        
+
+    </style>
+</head>
+<body>
+    <h1 id="opacity">background using opacity property</h1>
+    <h1 id="rgba">background using RGBA</h1>
+</body>
+</html>
