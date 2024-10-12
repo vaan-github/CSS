@@ -1,0 +1,43 @@
+<!-- 
+ How the CSS Load :
+    1. Browser Default (First to Load) => (Low Priority to overwrite)
+    2. External CSS 
+    3. Internal CSS
+    4. Inline CSS (Last to Load) => (High Priority to overwrite all the css)
+
+Note : The Last CSS loaded will overwrite the changes.
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- 
+ # Multiple Style Sheets
+ If some properties have been defined for the same selector (element) in different style sheets, the value from the last read style sheet will be used. 
+-->
+    <link rel="stylesheet" type="text/css" href="./style1.css"></link> 
+
+    <link rel="stylesheet" type="text/css" href="./style2.css"></link> 
+
+
+    <style>
+        #p1, #p2{
+            color: purple
+        }
+
+    </style>
+
+    <title>Document</title>
+
+</head>
+<body>
+    <p id= "p1" style="color: blue"> Inline css </p>
+    <p id= "p2"> Multiple External CSS: Here the style2.css working</p>
+
+
+</body>
+</html>
