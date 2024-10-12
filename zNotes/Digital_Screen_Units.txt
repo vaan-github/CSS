@@ -75,3 +75,48 @@ Iska matlab hai ki element ka width viewport ke jo bhi chhota dimension hai (wid
 * When to Use: Use vmax when you want elements to scale based on the larger dimension of the viewport. This can be useful for large backgrounds or elements that need to grow with the viewport, regardless of its orientation.
 * Example:
 width: 50vmax;  /* Takes up 50% of the larger viewport dimension */
+
+
+// not necessary to learn 
+
+9.ch (Width of the "0" Character)
+* Description: The ch unit is based on the width of the character "0" (zero) in the current font. It measures the width of a character, making it a useful unit for defining layouts that are based on the average width of characters in a font.
+* Usage: This unit is particularly useful in web design when you want to create layouts that are consistent in terms of character width. For example, if you have text input fields or containers where you want text to align neatly, using ch can help achieve that.
+* Example:
+width: 10ch;  /* The width will be equivalent to the width of 10 "0" characters */
+
+10.cm (Centimeters)
+* Description: The cm unit measures length in centimeters. It is an absolute unit of measurement.
+* Usage: cm is often used in print media or any context where a specific physical measurement is required. It’s less common in web design since screens vary in size and resolution, but it's useful for printed documents or designs that will be physically produced.
+* Example:
+margin: 5cm;  /* A margin of 5 centimeters */
+
+11. mm (Millimeters)
+* Description: The mm unit measures length in millimeters. Like cm, it is an absolute unit of measurement.
+* Usage: Similar to cm, the mm unit is mainly used in print media or specific design contexts where precise measurements are important. It's often used in technical drawings or designs that require detailed specifications.
+* Example:
+border-width: 50mm;  /* A border width of 50 millimeters */
+
+12. in (Inches)
+* Description: The in unit measures length in inches. It’s another absolute measurement commonly used in the U.S. and other regions.
+* Usage: in is commonly used in print media, especially for specifying dimensions in documents, images, or layouts that will be printed. This unit is often more intuitive for those familiar with inches rather than metric measurements.
+* Example:
+width: 2in;  /* A width of 2 inches */
+
+13. pt (Points)
+* Description: The pt unit measures points, where 1 point is equal to 1/72 of an inch. This unit is traditionally used in typography.
+* Usage: Points are primarily used in print media for defining font sizes, line heights, and other typographic measurements. When designing documents or publications, using pt ensures that text appears correctly when printed.
+* Example:
+font-size: 12pt;  /* A font size of 12 points */
+
+14. pc (Picas)
+* Description: The pc unit measures picas, where 1 pica is equal to 12 points. This is another unit commonly used in typography.
+* Usage: Picas are often used in print design and layout, especially in professional typesetting and graphic design. Designers may use picas to specify the size of elements or spacing in documents to maintain consistency across print media.
+* Example:
+line-height: 1pc;  /* A line height of 1 pica */
+
+15.ex
+* Description: The ex unit is based on the height of the lowercase letter "x" in the current font. It is a relative unit that can be used to size elements in relation to the text height.
+* Usage: The ex unit is less commonly used compared to other units but can be beneficial in creating scalable typography and layouts that adapt based on text size. It’s more relevant in designs where text height is critical for layout consistency.
+* Example:
+height: 2ex;  /* The height will be equivalent to twice the height of the letter "x" */
