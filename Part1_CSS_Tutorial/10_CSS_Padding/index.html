@@ -1,0 +1,64 @@
+<!-- CSS Padding -->
+<!-- Padding is used to create space around an element's content, inside of any defined borders.
+ -->
+
+ <!-- Padding - Individual Sides -->
+<!-- 
+ CSS has properties for specifying the padding for each side of an element:
+* padding-top
+* padding-right
+* padding-bottom
+* padding-left
+All the padding properties can have the following values:
+
+* length - specifies a padding in px, pt, cm, etc.
+* % - specifies a padding in % of the width of the containing element
+* inherit - specifies that the padding should be inherited from the parent element
+# Note: Negative values are not allowed.
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+div {
+  border: 1px solid black;
+  padding: 25px 50px 75px;
+  background-color: lightblue;
+}
+
+p{
+    border: 3px solid red; /* use ; to end the shorthand property*/
+
+    /* The padding and width only add ups  */
+    padding-left: 100px;
+    width : 800px /* This tweak content area*/
+}
+
+p.box-sizing{
+    border: 3px solid red; /* use ; to end the shorthand property*/
+
+    /* This will fix the box to 800px width no matter the padding  */
+    padding-left: 100px;
+    width : 800px;
+    box-sizing: border-box
+
+}
+</style>
+</head>
+<body>
+
+<h2>The padding shorthand property - 3 values</h2>
+
+<div>This div element has a top padding of 25px, a right and left padding of 50px, and a bottom padding of 75px.</div>
+
+<p>Padding and Element Width</p>
+
+<p class="box-sizing"> Box Sizing</p>
+
+</body>
+</html>
+
+<!-- Padding and Element Width -->
+<!-- The CSS width property specifies the width of the element's content area. The content area is the portion inside the padding, border, and margin of an element  -->
+<!-- So, if an element has a specified width, the padding added to that element will be added to the total width of the element. This is often an undesirable result. -->
