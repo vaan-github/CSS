@@ -1,0 +1,111 @@
+<!-- 
+ # CSS Margins:
+ The CSS margin properties are used to create space around elements, outside of any defined borders.
+-->
+
+<!-- 
+ # CSS has properties for specifying the margin for each side of an element:
+* margin-top
+* margin-right
+* margin-bottom
+* margin-left
+
+# All the margin properties can have the following values:
+* auto - the browser calculates the margin
+* length - specifies a margin in px, pt, cm, etc.
+* % - specifies a margin in % of the width of the containing element
+* inherit - specifies that the margin should be inherited from the parent element
+#Tip: Negative values are allowed.
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        :root {
+            border: 5px solid green;
+
+        }
+
+        body{
+            border: 2px solid orangered;
+        }
+
+        div {
+            /* height: 200px; */
+            width: 500px;
+            border: 2px solid blue;
+
+            /* relative to parent element */
+            margin: 10%
+        }
+
+        h1 {
+            border: 2px solid red;
+            /* inherit the value from the parent */
+            margin: inherit
+                /* margin:auto */
+        }
+
+        .box {
+            border: 2px solid yellow;
+
+            background-color: lightblue;
+        }
+
+
+         /* The below is the example of margin collapse */
+        .box1{
+            margin-bottom:10px
+
+        }
+        /* The gap should be 20px but it is 10px */
+
+        .box2{
+            margin-top:10px
+
+        }
+    </style>
+</head>
+
+<body class="body">this is body
+    <div>
+        this is div
+        <h1>this is h1</h1>
+    </div>
+
+    <div class="box">Margin collapsed
+
+        <div class="box1">
+            box1
+
+        </div>
+
+        <div class="box2">
+            box2
+        </div>
+    </div>
+</body>
+
+</html>
+
+<!-- 
+   * Margin Collapse
+ Top and bottom margins of elements are sometimes collapsed into a single margin that is equal to the largest of the two margins.
+
+ This does not happen on left and right margins! Only top and bottom margins!
+-->
+
+<!-- 
+  Margin - Shorthand Property
+  
+  # margin: 25px 50px 75px 100px;
+* top margin is 25px
+* right margin is 50px
+* bottom margin is 75px
+* left margin is 100px
+-->
