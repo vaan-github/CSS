@@ -1,0 +1,45 @@
+<!-- CSS Box Model -->
+<!-- All HTML elements can be considered as boxes. -->
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+div {
+    /* Important: When you set the width and height properties of an element with CSS, you just set the width and height of the content area. To calculate the total width and height of an element, you must also include the padding and borders. */
+
+    /* EXAMPLE */
+
+    /* Here is the calculation:
+
+#  320px (width of content area)
++ 20px (left padding + right padding)
++ 10px (left border + right border)
+= 350px (total width)
+
+#  50px (height of content area)
++ 20px (top padding + bottom padding)
++ 10px (top border + bottom border)
+= 80px (total height) */
+  background-color: lightgrey;
+  width: 300px;
+  border: 15px solid green;
+  padding: 50px;
+  margin: 20px;
+}
+
+/* Note: The margin property also affects the total space that the box will take up on the page, but the margin is not included in the actual size of the box. The box's total width and height stops at the border. */
+</style>
+</head>
+<body>
+
+<h2>Demonstrating the Box Model</h2>
+
+<p>The CSS box model is essentially a box that wraps around every HTML element. It consists of: borders, padding, margins, and the actual content.</p>
+
+<div>This text is the content of the box. We have added a 50px padding, 20px margin and a 15px green border. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+
+</body>
+</html>
+
+
