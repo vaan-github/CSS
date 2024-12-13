@@ -1,0 +1,32 @@
+<!-- 
+ The direction and unicode-bidi properties can be used to change the text direction of an element.
+-->
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+p.ex1 {
+  direction: rtl;
+
+  /* 
+   Without bidi-override:
+   "Hello" (English) flows left-to-right.
+   "مرحبا" (Arabic) flows right-to-left.
+   The result will look messy because each language uses its natural direction.
+  */
+
+  /* With bidi-override:
+     Both "Hello" and "مرحبا" will strictly flow from right-to-left, making them appear in reverse order.
+ */
+  unicode-bidi: bidi-override;
+}
+</style>
+</head>
+<body>
+
+<p>This is the default text direction.</p>
+
+<p class="ex1">This is right-to-left text direction. Hello, مرحبا</p>
+
+</body>
+</html>
