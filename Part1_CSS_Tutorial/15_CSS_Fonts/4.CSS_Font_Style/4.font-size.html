@@ -1,0 +1,49 @@
+<!-- 
+ The font-size property sets the size of the text.
+ The font-size value can be an absolute, or relative size.
+ The default size for normal text, like paragraphs, is 16px (16px=1em)
+-->
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+    body{
+        /* Our code now works great! It shows the same text size in all browsers, and allows all browsers to zoom or resize the text! */
+        font-size: 100%;
+    }
+ /* 
+ Tip: If you use pixels, you can still use the zoom tool to resize the entire page.
+  */
+h1 {
+  /* full control on text size */
+  font-size: 40px;
+}
+
+h2 {
+  font-size: 1.5em;
+}
+
+p {
+  font-size: 14px;
+}
+
+p.responsive{
+    color: red;
+    /* Responsive Font Size */
+    /* Viewport is the browser window size. 1vw = 1% of viewport width. If the viewport is 50cm wide, 1vw is 0.5cm. */
+    font-size: 4vw;
+}
+</style>
+</head>
+<body>
+
+<h1>This is heading 1</h1>
+<h2>This is heading 2</h2>
+<p>This is a paragraph.</p>
+<p>This is another paragraph.</p>
+<p class="responsive"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque itaque a cumque consequatur blanditiis ea sunt nesciunt reprehenderit fuga exercitationem.</p>
+
+</body>
+</html>
+
+
