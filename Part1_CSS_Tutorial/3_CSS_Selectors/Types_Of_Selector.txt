@@ -1,0 +1,87 @@
+## HERE IS THE COMPREHENSIVE LISTS OF SELECTORS.
+
+1. Universal Selector:  
+   Targets all elements on the page. Represented by an asterisk `*`.  
+   Example: * { margin: 0; padding: 0; }
+
+2. Type Selector:  
+   Targets elements by their tag name.  
+   Example: p { font-size: 16px; }
+
+3. Class Selector:  
+   Targets elements with a specific class attribute. Represented by a dot `.` followed by the class name.  
+   Example: .myClass { color: blue; }
+
+4. ID Selector:  
+   Targets elements with a unique ID. Represented by a hash `#` followed by the ID name.  
+   Example: #myID { background-color: yellow; }
+
+5. Group Selector:  
+   Targets multiple elements, separated by commas.  
+   Example: h1, h2, h3 { font-family: Arial, sans-serif; }
+
+6. Descendant Selector:  
+   Targets elements nested inside a parent element. Represented by a space between selectors.  
+   Example: div p { color: green; }
+
+7. Child Selector:  
+   Targets only the direct children of a parent element. Represented by `>` between selectors.  
+   Example: ul > li { list-style: none; }
+
+8. Adjacent Sibling Selector:  
+   Targets an element immediately following another element. Represented by `+` between selectors.  
+   Example: h1 + p { margin-top: 10px; }
+
+9. General Sibling Selector:  
+   Targets all sibling elements that follow a specific element. Represented by `~` between selectors.  
+   Example: h1 ~ p { color: gray; }
+
+10. Attribute Selector:  
+    Targets elements based on attributes or their values.  
+    - Example for targeting an element with a specific attribute:  
+      input[type="text"] { border: 1px solid black; }  
+    - Example for targeting elements with a specific attribute value:  
+      a[target="_blank"] { color: red; }  
+    - Example for elements with an attribute containing a word:  
+      [title~="flower"] { color: purple; }
+
+11. Pseudo-classes:  
+    Targets elements in a specific state.  
+    - Example for targeting the first child:  
+      p:first-child { font-weight: bold; }  
+    - Example for targeting links when hovered:  
+      a:hover { text-decoration: underline; }
+
+12. Pseudo-elements:  
+    Targets specific parts of an element.  
+    - Example for targeting the first letter of a paragraph:  
+      p::first-letter { font-size: 2em; }  
+    - Example for adding content before an element:  
+      h1::before { content: "Note: "; color: red; }
+
+13. Combinators:  
+    Combine selectors for more precise targeting.  
+    - Descendant selector: div p { color: blue; }  
+    - Child selector: div > p { font-size: 14px; }  
+    - Adjacent sibling: h1 + p { margin: 0; }  
+    - General sibling: h1 ~ p { line-height: 1.5; }
+
+14. Negation Selector:  
+    Targets everything except the specified element.  
+    Example: input:not([type="submit"]) { border: 1px solid gray; }
+
+15. Advanced Selectors:  
+    - :nth-child(): Targets elements based on their position within a parent.  
+      Example: tr:nth-child(even) { background-color: #f2f2f2; }  
+    - :nth-of-type(): Targets elements of a specific type within their parent.  
+      Example: li:nth-of-type(2) { color: red; }
+
+16. CSS Variables in Selectors (Custom Properties):  
+    Allows dynamic styling with reusable values.  
+    Example:
+    :root {
+      --main-color: blue;
+    }
+    p {
+      color: var(--main-color);
+    }

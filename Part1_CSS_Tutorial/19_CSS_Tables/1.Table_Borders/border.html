@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Border</title>
+    <style>
+         
+        .table1{
+            /* 
+            Double Borders
+             Notice that the table in the examples above have double borders. This is because both the table and the <th> and <td> elements have separate borders.
+            */
+            border-collapse: collapse;
+            border: 1px solid blue;
+        }
+
+
+        .table2,th,td{
+            border: 1px solid;
+            /* width:100%; */
+        }
+
+    </style>
+</head>
+<body>
+    <table class="table1" >
+
+        <caption>With border-collapse</caption>
+
+        <!-- thead is only for sepration -->
+        <thead class="table1">
+         <!-- tr is for 1 row only -->
+         <tr class="table1">
+            <th class="table1">
+                Table Head 1
+                <td class="table1">Table Data</td>
+            </th>
+
+            <th class="table1">Table Header 2</th>
+         </tr>
+
+         <tr class="table1">
+            <th class="table1">New Row Table Header</th>
+         </tr>
+        </thead>
+
+        <!-- tbody is only for sepration -->
+        <tbody class="table1">
+
+        <tr class="table1">
+            <td class="table1">1</td>
+            <td class="table1">1</td>
+            <td class="table1">1</td>
+        </tr>
+        <tr class="table1">
+            <td class="table1">2</td>
+            <td class="table1">2</td>
+            <td class="table1">2</td>
+        </tr>
+        
+        <!-- Table Column only -->
+        
+        <tr class="table1"><td class="table1">3</td></tr>
+        <tr class="table1"><td class="table1">3</td></tr>
+        <tr class="table1"><td class="table1">3</td></tr>
+        
+        
+        
+        </tbody>
+
+    </table>
+
+    <br>
+    <br>
+
+
+    <table class="table2">
+
+        <caption>Without border-collapse</caption>
+
+        <!-- thead is only for sepration -->
+        <thead>
+         <!-- tr is for 1 row only -->
+         <tr>
+            <th>
+                Table Head 1
+                <td>Table Data</td>
+            </th>
+
+            <th>Table Header 2</th>
+         </tr>
+
+         <tr>
+            <th>New Row Table Header</th>
+         </tr>
+        </thead>
+
+        <!-- tbody is only for sepration -->
+        <tbody>
+
+        <tr>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>2</td>
+            <td>2</td>
+        </tr>
+        
+        <!-- Table Column only -->
+        
+        <tr><td>3</td></tr>
+        <tr><td>3</td></tr>
+        <tr><td>3</td></tr>
+        
+        
+        
+        </tbody>
+
+    </table>
+</body>
+</html>
