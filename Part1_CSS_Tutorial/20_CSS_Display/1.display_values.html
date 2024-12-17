@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Display Property Examples</title>
+  <style>
+    .inline-example {
+      display: inline; /* Element will not start on a new line, flowing within the text. */
+      background-color: lightblue;
+      padding: 5px;
+    }
+
+    .block-example {
+      display: block; /* Element will start on a new line, taking full width. */
+      background-color: lightgreen;
+      padding: 10px;
+    }
+
+    .inline-block-example {
+      display: inline-block; /* Behaves like inline but allows setting width/height. */
+      background-color: pink;
+      padding: 10px;
+      width: 100px;
+    }
+
+    .flex-example {
+      display: flex; /* Flexbox layout allows flexible positioning of child items. */
+      gap: 10px;
+    }
+
+    .grid-example {
+      display: grid; /* Grid layout for precise positioning. */
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      background-color: lightcoral;
+    }
+
+    .none-example {
+      display: none; 
+      /* Hides the element completely. */
+    }
+
+    .contents-example {
+      display: contents; 
+      /* Makes the container disappear but keeps child elements visible. */
+    }
+
+    .list-item-example {
+      display: list-item; /* Makes the element behave like a <li>. */
+      list-style: square inside;
+    }
+
+    .table-example {
+      display: table; /* Behaves like a table element. */
+      border: 1px solid black;
+    }
+
+    .caption-example {
+      display: table-caption; /* Behaves like a table caption. */
+      caption-side: top;
+    }
+  </style>
+</head>
+<body>
+  <h1>Display Property Examples</h1>
+
+  <!-- inline -->
+  <div>
+    <span class="inline-example">This is an inline element.</span>
+    <span class="inline-example">Another inline element.</span>
+  </div>
+
+  <!-- block -->
+  <div class="block-example">
+    This is a block element that starts on a new line.
+  </div>
+
+  <!-- inline-block -->
+  <div>
+    <div class="inline-block-example">Inline-block 1</div>
+    <div class="inline-block-example">Inline-block 2</div>
+  </div>
+
+  <!-- flex -->
+  <div class="flex-example">
+    <div style="background: lightblue; padding: 10px;">Flex Item 1</div>
+    <div style="background: lightgreen; padding: 10px;">Flex Item 2</div>
+    <div style="background: pink; padding: 10px;">Flex Item 3</div>
+  </div>
+
+  <!-- grid -->
+  <div class="grid-example">
+    <div style="background: lightblue; padding: 10px;">Grid Item 1</div>
+    <div style="background: lightgreen; padding: 10px;">Grid Item 2</div>
+    <div style="background: pink; padding: 10px;">Grid Item 3</div>
+  </div>
+
+  <!-- none -->
+  <div class="none-example">
+    This text will not appear because its display is set to "none".
+  </div>
+
+  <!-- contents -->
+  <div class="contents-example">
+    <p>Child 1 of contents (acts as a direct child of parent).</p>
+    <p>Child 2 of contents (acts as a direct child of parent).</p>
+  </div>
+
+  <!-- list-item -->
+  <div class="list-item-example">
+    This behaves like a list item.
+  </div>
+
+  <!-- table -->
+  <div class="table-example">
+    <div style="display: table-row;">
+      <div style="display: table-cell; border: 1px solid black; padding: 5px;">Row 1, Cell 1</div>
+      <div style="display: table-cell; border: 1px solid black; padding: 5px;">Row 1, Cell 2</div>
+    </div>
+    <div style="display: table-row;">
+      <div style="display: table-cell; border: 1px solid black; padding: 5px;">Row 2, Cell 1</div>
+      <div style="display: table-cell; border: 1px solid black; padding: 5px;">Row 2, Cell 2</div>
+    </div>
+  </div>
+
+  <!-- table-caption -->
+  <div class="table-example">
+    <div class="caption-example">This is the table caption.</div>
+    <div style="display: table-row;">
+      <div style="display: table-cell; border: 1px solid black; padding: 5px;">Cell 1</div>
+      <div style="display: table-cell; border: 1px solid black; padding: 5px;">Cell 2</div>
+    </div>
+  </div>
+</body>
+</html>

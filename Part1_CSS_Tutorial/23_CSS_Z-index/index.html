@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>z-index Example</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #f0f0f0;
+    }
+
+    .container {
+      position: relative; /* Creates a stacking context */
+      width: 300px;
+      height: 300px;
+      border: 2px solid #333;
+    }
+
+    .box {
+      position: absolute;
+      width: 100px;
+      height: 100px;
+      text-align: center;
+      line-height: 100px;
+      font-weight: bold;
+      color: white;
+    }
+
+    .box1 {
+      background-color: red;
+      top: 50px;
+      left: 50px;
+      z-index: 1; /* Lower stacking order */
+    }
+
+    .box2 {
+      background-color: green;
+      top: 80px;
+      left: 80px;
+      z-index: 3; /* Highest stacking order */
+    }
+
+    .box3 {
+      background-color: blue;
+      top: 110px;
+      left: 110px;
+      z-index: 2; /* Middle stacking order */
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="box box1">1</div>
+    <div class="box box2">2</div>
+    <div class="box box3">3</div>
+  </div>
+</body>
+</html>

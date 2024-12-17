@@ -1,0 +1,50 @@
+<!-- 
+ Rule to Remember:
+Block elements ke andar koi bhi element (inline ya block) aa sakta hai.
+Inline elements ke andar sirf inline elements allowed hain. Block elements ko rakhne ke liye wrapping ka use karna chahiye.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Display Property Example</title>
+  <style>
+    .inline-as-block {
+      display: block; /* Changing how the element is displayed to block */
+      background-color: lightblue;
+      padding: 10px;
+    }
+
+    .nested-block {
+      background-color: lightgreen;
+      padding: 10px;
+    }
+
+    .incorrect-nesting {
+      display: inline; /* An inline element styled as inline */
+    }
+  </style>
+</head>
+<body>
+  <h1>Display Property Example</h1>
+
+  <!-- This is valid because the display property is set to block -->
+  <span class="inline-as-block">
+    <!-- Even though <span> is originally an inline element, it can now contain block elements -->
+    <div class="nested-block">This is a block element inside a span (allowed because display is block).
+
+    </div>
+  </span>
+
+  <!-- This is incorrect HTML behavior -->
+  <div class="incorrect-nesting">
+    <!-- Block elements inside inline elements are not allowed in valid HTML -->
+    <div class="nested-block">This block element inside an inline element is invalid HTML!</div>
+  </div>
+
+  <!-- Browser handling -->
+  <p>Note: While modern browsers might render invalid HTML without throwing errors, this is not considered valid HTML. Avoid placing block elements directly inside inline elements.</p>
+</body>
+</html>

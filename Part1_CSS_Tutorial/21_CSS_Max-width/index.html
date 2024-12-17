@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+    
+div.ex1 {
+  /* a horizontal scroll bar occur when browser size is less then 500px */
+  width: 500px; 
+  
+  /* 
+  ### Key Points about `margin: auto;`:
+
+1. **Horizontal Centering:**
+   - Works when the element has a defined `width`.
+   - Automatically sets equal margins on the left and right to center the element.
+
+2. **Vertical Centering:**
+   - Works when the element has a defined `height` and the parent uses `display: flex` or similar layout techniques.
+
+3. **No Defined Width/Height:**
+   - If no `width` or `height` is set, `margin: auto;` has no effect on centering.
+
+4. **Element Types:**
+   - Works only on block-level elements or elements with `display: block`, `flex`, `grid`, etc.
+   - Does not work on inline elements.
+
+5. **Common Use Cases:**
+   - Centering containers (`div`, `form`) horizontally or both horizontally and vertically (with flexbox). 
+
+  */
+  margin: auto;
+  border: 3px solid #73AD21;
+}
+
+div.ex2 {
+    /* 
+    no scroll bar appear when browser window resize
+    */
+  max-width: 500px;
+  margin: auto;
+  border: 3px solid #73AD21;
+}
+</style>
+</head>
+<body>
+
+<h2>CSS Max-width</h2>
+
+<div class="ex1">This div element has width: 500px;</div>
+<br>
+
+<div class="ex2">This div element has max-width: 500px;</div>
+
+<p><strong>Tip:</strong> Drag the browser window to smaller than 500px wide, to see the difference between 
+the two divs!</p>
+
+</body>
+</html>
+
+
