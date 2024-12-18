@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Float Property Example</title>
+  <style>
+    /* General body styling for readability */
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 20px;
+      background-color: #f8f8f8;
+    }
+
+    /* Container to hold floated elements */
+    .container {
+      border: 2px solid #ccc;
+      padding: 10px;
+      margin-bottom: 20px;
+      background-color: #fff;
+    }
+
+    /* Image styling */
+    img {
+      width: 150px;
+      height: auto;
+      margin: 10px;
+      border: 2px solid #333;
+    }
+
+    /* Float Left: Floats image to the left of text */
+    .float-left img {
+      float: left; /* Image floats to the left */
+    }
+
+    /* Float Right: Floats image to the right of text */
+    .float-right img {
+      float: right; /* Image floats to the right */
+    }
+
+    /* No Float: Image stays inline with the text */
+    .no-float img {
+      float: none; /* Default behavior: no floating */
+    }
+
+    /* Inherit Float: Inherits the float value from the parent */
+    .parent {
+      float: left; /* Parent element has float: left */
+    }
+
+    .inherit-float img {
+      float: inherit; /* Child inherits float value from the parent */
+    }
+
+    /* Clearfix: To contain floated elements within the container */
+    .clearfix::after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+  </style>
+</head>
+<body>
+  <h1>CSS Float Property Example</h1>
+
+  <!-- Float Left -->
+  <div class="container float-left clearfix">
+    <h2>Float: Left</h2>
+    <img src="https://via.placeholder.com/150" alt="Example Image">
+    <p>
+      This image is floated to the **left** of the text. The text wraps around the right side of the image, filling the remaining space in the container.
+    </p>
+  </div>
+
+  <!-- Float Right -->
+  <div class="container float-right clearfix">
+    <h2>Float: Right</h2>
+    <img src="https://via.placeholder.com/150" alt="Example Image">
+    <p>
+      This image is floated to the **right** of the text. The text wraps around the left side of the image, filling the remaining space in the container.
+    </p>
+  </div>
+
+  <!-- No Float -->
+  <div class="container no-float clearfix">
+    <h2>Float: None</h2>
+    <img src="https://via.placeholder.com/150" alt="Example Image">
+    <p>
+      This image has **no float** applied. It appears in the flow of the text, just as it occurs naturally in the document.
+    </p>
+  </div>
+
+  <!-- Inherit Float -->
+  <div class="container parent clearfix">
+    <h2>Float: Inherit</h2>
+    <div class="inherit-float">
+      <img src="https://via.placeholder.com/150" alt="Example Image">
+      <p>
+        This image inherits the **float: left** property from its parent container. The text wraps around the image accordingly.
+      </p>
+    </div>
+  </div>
+
+</body>
+</html>

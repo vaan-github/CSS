@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Overflow Example</title>
+  <style>
+    /* General body styling for clarity */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f9;
+      margin: 0;
+      padding: 20px;
+    }
+
+    /* Parent container to demonstrate overflow */
+    .box {
+      width: 250px; /* Fixed width */
+      height: 100px; /* Fixed height */
+      border: 2px solid #333;
+      margin: 20px 0;
+      padding: 10px;
+      background-color: #ddd;
+    }
+
+    /* Example 1: overflow: visible */
+    .overflow-visible {
+      overflow: visible; /* Default: content overflows outside the box */
+    }
+
+    /* Example 2: overflow: hidden */
+    .overflow-hidden {
+      overflow: hidden; /* Content is clipped and hidden */
+    }
+
+    /* Example 3: overflow: scroll */
+    .overflow-scroll {
+      overflow: scroll; /* Scrollbars always appear */
+    }
+
+    /* Example 4: overflow: auto */
+    .overflow-auto {
+      overflow: auto; /* Scrollbars appear only when content overflows */
+    }
+
+    /* Example 5: overflow-x: scroll */
+    .overflow-x-scroll {
+      overflow-x: scroll; /* Horizontal scroll only */
+      overflow-y: hidden; /* Prevents vertical scroll */
+    }
+
+    /* Example 6: overflow-y: scroll */
+    .overflow-y-scroll {
+      overflow-y: scroll; /* Vertical scroll only */
+      overflow-x: hidden; /* Prevents horizontal scroll */
+    }
+  </style>
+</head>
+<body>
+
+  <h1>CSS Overflow Property Examples</h1>
+
+  <!-- Example 1: overflow: visible -->
+  <h2>Overflow: Visible</h2>
+  <div class="box overflow-visible">
+    This is an example of <strong>overflow: visible</strong>. Content spills outside the box. Add more text here to observe it overflowing. 
+    <br>
+    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vitae aspernatur culpa at laudantium.
+    
+  </div>
+
+  <!-- Example 2: overflow: hidden -->
+  <h2>Overflow: Hidden</h2>
+  <div class="box overflow-hidden">
+    This is an example of <strong>overflow: hidden</strong>. The overflowing content will be clipped and hidden.
+    <br>
+    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vitae aspernatur culpa at laudantium. Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium cum fuga doloremque perspiciatis ratione cumque, ipsa eligendi rem dolorem assumenda.
+  </div>
+
+  <!-- Example 3: overflow: scroll -->
+  <h2>Overflow: Scroll</h2>
+  <div class="box overflow-scroll">
+    This is an example of <strong>overflow: scroll</strong>. Scrollbars will always be visible, even if content doesn't overflow.
+    <br>
+    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vitae aspernatur culpa at laudantium.
+  </div>
+
+  <!-- Example 4: overflow: auto -->
+  <h2>Overflow: Auto</h2>
+  <div class="box overflow-auto">
+    This is an example of <strong>overflow: auto</strong>. Scrollbars appear only when the content overflows the box.
+    <br>
+    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vitae aspernatur culpa at laudantium.
+  </div>
+
+  <!-- Example 5: overflow-x: scroll -->
+  <h2>Overflow-X: Scroll</h2>
+  <div class="box overflow-x-scroll">
+    This is an example of <strong>overflow-x: scroll</strong>. Scroll horizontally if the content overflows, but no vertical scroll.
+    Add a very long line of text here to trigger horizontal scrolling.
+    <br>
+    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vitae aspernatur culpa at laudantium.
+  </div>
+
+  <!-- Example 6: overflow-y: scroll -->
+  <h2>Overflow-Y: Scroll</h2>
+  <div class="box overflow-y-scroll">
+    This is an example of <strong>overflow-y: scroll</strong>. Scroll vertically if the content overflows, but no horizontal scroll. Add more text here to trigger the vertical scrollbar.
+    <br>Line 1<br>Line 2<br>Line 3<br>Line 4<br>Line 5
+  </div>
+
+</body>
+</html>

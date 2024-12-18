@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Float and Clearfix Example</title>
+  <style>
+    /* General body styling for better visibility */
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 20px;
+      background-color: #f9f9f9;
+    }
+
+    h1, h2 {
+      margin-top: 40px;
+    }
+
+    /* Container to demonstrate floated elements */
+    .container {
+      border: 2px solid #333;
+      padding: 10px;
+      margin-bottom: 20px;
+      background-color: #fff;
+    }
+
+    /* Floated boxes */
+    .box {
+      width: 150px;
+      height: 100px;
+      background-color: #4CAF50;
+      color: white;
+      text-align: center;
+      line-height: 100px;
+      margin: 10px;
+    }
+
+    /* Float Left */
+    .float-left {
+      float: left; /* Elements float to the left */
+    }
+
+    /* Float Right */
+    .float-right {
+      float: right; /* Elements float to the right */
+    }
+
+    /* Example 1: Without Clearfix */
+    .no-clearfix {
+        text-align: center;
+      /* No clearfix applied */
+    }
+
+    /* Clearfix Hack 1: Pseudo-Element Clearfix */
+    .clearfix::after {
+      content: ""; /* Adds an invisible pseudo-element */
+      display: table; /* Forces the pseudo-element to act like a table */
+      clear: both; /* Clears both left and right floats */
+    }
+
+    /* Clearfix Hack 2: Using overflow:auto */
+    .clearfix-overflow {
+      overflow: auto; /* Ensures the container expands to contain floats */
+    }
+
+    /* Clearfix Alternative: Using clear property for the next element */
+    .clear-next {
+      clear: both; /* Ensures this element starts after floated elements */
+    }
+  </style>
+</head>
+<body>
+  <h1>CSS Float, Clear, and Clearfix Hacks</h1>
+
+  <!-- Example 1: Floated elements without clearfix -->
+  <h2>1. Floated Elements Without Clearfix</h2>
+  <div class="container no-clearfix">
+    <div class="box float-left">Float Left</div>
+    <div class="box float-right">Float Right</div>
+  </div>
+  <p>
+    Without clearfix, the parent container does not expand to contain the floated elements. This can cause layout issues.
+  </p>
+
+  <!-- Example 2: Using Clearfix Hack (Pseudo-element method) -->
+  <h2>2. Clearfix Hack: Pseudo-Element Method</h2>
+  <div class="container clearfix">
+    <div class="box float-left">Float Left</div>
+    <div class="box float-right">Float Right</div>
+  </div>
+  <p>
+    The pseudo-element clearfix forces the parent container to expand and contain the floated elements properly.
+  </p>
+
+  <!-- Example 3: Using overflow:auto as Clearfix -->
+  <h2>3. Clearfix Hack: overflow:auto</h2>
+  <div class="container clearfix-overflow">
+    <div class="box float-left">Float Left</div>
+    <div class="box float-right">Float Right</div>
+  </div>
+  <p>
+    The <code>overflow: auto</code> method also forces the container to expand, containing the floated elements.
+  </p>
+
+  <!-- Example 4: Using clear property for the next element -->
+  <h2>4. Using the Clear Property</h2>
+  <div class="container">
+    <div class="box float-left">Float Left</div>
+    <div class="box float-right">Float Right</div>
+    <div class="clear-next">Cleared Content</div>
+  </div>
+  <p>
+    The <code>clear: both</code> property ensures that this element appears after all floated elements.
+  </p>
+</body>
+</html>
