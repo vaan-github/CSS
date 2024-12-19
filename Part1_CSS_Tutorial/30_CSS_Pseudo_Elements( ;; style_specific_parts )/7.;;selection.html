@@ -1,0 +1,28 @@
+<!-- 
+ The ::selection pseudo-element matches the portion of an element that is selected by a user.
+
+The following CSS properties can be applied to ::selection: color, background, cursor, and outline.
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+    /* no element mention means everything is selected. */
+::selection {
+  color: red;
+  background: yellow;
+}
+</style>
+</head>
+<body>
+
+<h1>Select some text on this page:</h1>
+
+<p>This is a paragraph.</p>
+<div>This is some text in a div element.</div>
+
+</body>
+</html>
+
+
