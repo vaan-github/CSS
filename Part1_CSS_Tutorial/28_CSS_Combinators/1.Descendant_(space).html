@@ -1,0 +1,44 @@
+<!-- CSS Combinators -->
+<!-- 
+A combinator is something that explains the relationship between the selectors.
+-->
+<!-- 
+There are four different combinators in CSS:
+
+1. Descendant combinator (space)
+2. Child combinator (>)
+3. Next sibling combinator (+)
+4. Subsequent-sibling combinator (~)
+-->
+
+<!-- 1. Descendant Combinator -->
+<!-- <div> ke andar jitne <p> hoga usko hi change karo -->
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+div p {
+  background-color: yellow;
+}
+</style>
+</head>
+<body>
+
+<h2>Descendant Selector</h2>
+
+<p>The descendant selector matches all elements that are descendants of a specified element.</p>
+
+<div>
+  <p>Paragraph 1 in the div.</p>
+  <p>Paragraph 2 in the div.</p>
+  <section><p>Paragraph 3 in the div.</p></section>
+</div>
+
+<p>Paragraph 4. Not in a div.</p>
+<p>Paragraph 5. Not in a div.</p>
+
+</body>
+</html>
+
+
