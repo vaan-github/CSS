@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Horizontal Navigation Bar</title>
+    <style>
+       ul{
+        list-style-type:none;
+        margin:0;
+        padding:0;
+        background-color: #a1a1a1;
+        position: relative;
+        /* fixed the alignment issue */
+        display: flex;  
+        position: fixed;
+        top: 0;
+        
+
+        /* This is important */
+        width: 100%;
+        left:0;
+
+       }
+
+       li{
+        display: inline-block;
+        padding: 20px;
+        background-color: red;
+        border-right: 2px solid black;
+       }
+
+       li:hover{
+        background-color: green;
+       }
+
+       li:last-child:hover{
+        background-color: green;
+       }
+
+       li:last-child{
+        border-right: none;
+        border-left: 2px solid black
+       }
+
+       a{
+        /* background-color: red; */
+        text-decoration: none; 
+        color: white;
+        font-variant: small-caps;
+        
+       }
+
+       ul li:last-child{
+        background-color: red;
+        /* color: red; */
+        position: absolute;
+        right:0px;
+       }
+    </style>
+</head>
+<body>
+    
+    <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#news">News</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#about">About</a></li>
+    </ul>
+    
+    
+    <h1>Fixed Top Navigation Bar</h1>
+  <h2>Scroll this page to see the effect</h2>
+  <h2>The navigation bar will stay at the top of the page while scrolling</h2>
+
+  <p>Some text some text some text some text..</p>
+  <p>Some text some text some text some text..</p>
+  <p>Some text some text some text some text..</p>
+  <p>Some text some text some text some text..</p>
+  <p>Some text some text some text some text..</p>
+  <p>Some text some text some text some text..</p>
+  <p>Some text some text some text some text..</p>
+  <p>Some text some text some text some text..</p>
+  <p>Some text some text some text some text..</p>
+  <p>Some text some text some text some text..</p>
+  <p>Some text some text some text some text..</p>
+  <p>Some text some text some text some text..</p>
+  <p>Some text some text some text some text..</p>
+  <p>Some text some text some text some text..</p>
+  <p>Some text some text some text some text..</p>
+  <p>Some text some text some text some text..</p>
+  <p>Some text some text some text some text..</p>
+  <p>Some text some text some text some text..</p>
+  <p>Some text some text some text some text..</p>
+  <p>Some text some text some text some text..</p>
+</body>
+</html>
