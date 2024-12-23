@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dropdown</title>
+    <style>
+        .dropdown{
+            background: #f1f1f1;
+            padding: 20px;
+            text-align: center;
+            width: 80px;
+            margin: auto;
+            position: relative;
+
+        }
+
+        .dropdown-content{
+            display: none;
+            padding: 20px;
+            position: absolute;
+            top:80px;
+            right: 10px;
+            background-color: aqua;
+            z-index: 1;
+        }
+
+        .dropdown:hover .dropdown-content{
+            display: block;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="dropdown">
+        Hover on me
+        <div class="dropdown-content">
+           hello
+        </div>
+    </div>
+</body>
+</html>
