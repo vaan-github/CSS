@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A complete HTML form example with various input types">
+  <meta name="author" content="Aniket Varma">
+  <title>HTML Form Example</title>
+</head>
+<body>
+  <form action="/submit" method="POST" enctype="multipart/form-data" novalidate>
+    <fieldset>
+      <legend>Personal Information</legend>
+
+      <label for="username">Name:</label>
+      <input 
+        type="text" 
+        id="username" 
+        name="username" 
+        placeholder="Enter your name" 
+        required 
+        autocomplete="name"
+      >
+      <br><br>
+
+      <label for="email">Email:</label>
+      <input 
+        type="email" 
+        id="email" 
+        name="email" 
+        placeholder="Enter your email" 
+        required 
+        autocomplete="email"
+      >
+      <br><br>
+
+      <label for="password">Password:</label>
+      <input 
+        type="password" 
+        id="password" 
+        name="password" 
+        placeholder="Enter your password" 
+        required 
+        minlength="8"
+      >
+      <br><br>
+
+      <label for="website">Website:</label>
+      <input 
+        type="url" 
+        id="website" 
+        name="website" 
+        placeholder="Enter your website URL" 
+        pattern="https?://.*" 
+        title="URL should begin with http:// or https://"
+      >
+      <br><br>
+
+      <label for="phone">Phone:</label>
+      <input 
+        type="tel" 
+        id="phone" 
+        name="phone" 
+        placeholder="Enter your phone number" 
+        pattern="[0-9]{10}"  
+        required
+      >
+      <small>Format: 123-456-7890</small>
+      <br><br>
+
+      <label for="favcolor">Favorite Color:</label>
+      <input 
+        type="color" 
+        id="favcolor" 
+        name="favcolor" 
+        value="#ff0000"
+      >
+      <br><br>
+
+      <label for="appointment">Appointment:</label>
+      <input 
+        type="datetime-local" 
+        id="appointment" 
+        name="appointment" 
+        required
+      >
+      <br><br>
+
+      <label for="quantity">Quantity:</label>
+      <input 
+        type="number" 
+        id="quantity" 
+        name="quantity" 
+        min="1" 
+        max="10" 
+        step="1" 
+        value="1"
+      >
+      <br><br>
+
+      <label>Gender:</label>
+      <input type="radio" name="gender" value="male" id="male" required>
+      <label for="male">Male</label>
+      <input type="radio" name="gender" value="female" id="female">
+      <label for="female">Female</label>
+      <br><br>
+
+      <label>Hobbies:</label>
+      <input type="checkbox" name="hobby[]" value="reading" id="reading">
+      <label for="reading">Reading</label>
+      <input type="checkbox" name="hobby[]" value="traveling" id="traveling">
+      <label for="traveling">Traveling</label>
+      <br><br>
+
+      <label for="country">Country:</label>
+      <select name="country" id="country" required>
+        <option value="" disabled selected>Select your country</option>
+        <option value="india">India</option>
+        <option value="usa">USA</option>
+        <option value="uk">UK</option>
+      </select>
+      <br><br>
+
+      <label for="bio">Biography:</label>
+      <textarea 
+        id="bio" 
+        name="bio" 
+        rows="4" 
+        cols="50" 
+        placeholder="Write about yourself" 
+        required
+      ></textarea>
+      <br><br>
+
+      <label for="profile_picture">Upload Profile Picture:</label>
+      <input 
+        type="file" 
+        id="profile_picture" 
+        name="profile_picture" 
+        accept="image/*"
+      >
+    </fieldset>
+
+    <br>
+
+    <button type="submit">Submit</button>
+    <button type="reset">Reset</button>
+    <br><br>
+
+    <label for="range">Volume:</label>
+    <input 
+      type="range" 
+      id="range" 
+      name="volume" 
+      min="0" 
+      max="100" 
+      step="1" 
+      value="50" 
+      oninput="document.getElementById('volumeValue').value = this.value"
+    >
+    <output id="volumeValue">50</output>
+  </form>
+</body>
+</html>
+
+
+
+
+
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+<!-- 
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Metadata about the document -->
+  <meta charset="UTF-8"> <!-- Specifies the character encoding for the document -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Ensures proper rendering on different devices -->
+  <meta name="description" content="A complete HTML form example with various input types"> <!-- Provides a brief description of the document -->
+  <meta name="author" content="Aniket Varma"> <!-- Specifies the author of the document -->
+  <title>HTML Form Example</title> <!-- Sets the title of the webpage -->
+</head>
+<body>
+  <form action="/submit" method="POST" enctype="multipart/form-data" novalidate>
+    <!-- The form tag defines an HTML form -->
+    <!-- action: Specifies the server endpoint to send the form data -->
+    <!-- method: Specifies the HTTP method (GET or POST) -->
+    <!-- enctype: Specifies how form data should be encoded (used here for file uploads) -->
+    <!-- novalidate: Disables HTML5 form validation -->
+
+    <fieldset>
+      <!-- Groups related form elements visually and semantically -->
+      <legend>Personal Information</legend> <!-- Provides a caption for the fieldset -->
+
+      <label for="username">Name:</label> <!-- Associates the label with the input -->
+      <input 
+        type="text" <!-- Specifies a single-line text input -->
+        id="username" <!-- Unique identifier for the input field -->
+        name="username" <!-- Name used to reference the input data on the server -->
+        placeholder="Enter your name" <!-- Displays a hint in the input field -->
+        required <!-- Marks the field as mandatory -->
+        autocomplete="name" <!-- Provides browser autofill hints -->
+      >
+      <br><br>
+
+      <label for="email">Email:</label>
+      <input 
+        type="email" <!-- Specifies an input for email addresses -->
+        id="email"
+        name="email"
+        placeholder="Enter your email"
+        required
+        autocomplete="email"
+      >
+      <br><br>
+
+      <label for="password">Password:</label>
+      <input 
+        type="password" <!-- Masks the input for sensitive data -->
+        id="password"
+        name="password"
+        placeholder="Enter your password"
+        required
+        minlength="8" <!-- Specifies the minimum number of characters -->
+      >
+      <br><br>
+
+      <label for="website">Website:</label>
+      <input 
+        type="url" <!-- Specifies an input for URLs -->
+        id="website"
+        name="website"
+        placeholder="Enter your website URL"
+        pattern="https?://.*" <!-- Regex pattern for URL validation -->
+        title="URL should begin with http:// or https://" <!-- Tooltip when validation fails -->
+      >
+      <br><br>
+
+      <label for="phone">Phone:</label>
+      <input 
+        type="tel" <!-- Specifies an input for telephone numbers -->
+        id="phone"
+        name="phone"
+        placeholder="Enter your phone number"
+        pattern="[0-9]{10}" <!-- Regex pattern for Indian phone numbers -->
+        required
+      >
+      <small>Format: 1234567890</small>
+      <br><br>
+
+      <label for="favcolor">Favorite Color:</label>
+      <input 
+        type="color" <!-- Opens a color picker -->
+        id="favcolor"
+        name="favcolor"
+        value="#ff0000" <!-- Default color value -->
+      >
+      <br><br>
+
+      <label for="appointment">Appointment:</label>
+      <input 
+        type="datetime-local" <!-- Combines date and time input -->
+        id="appointment"
+        name="appointment"
+        required
+      >
+      <br><br>
+
+      <label for="quantity">Quantity:</label>
+      <input 
+        type="number" <!-- Allows numeric input -->
+        id="quantity"
+        name="quantity"
+        min="1" <!-- Minimum value -->
+        max="10" <!-- Maximum value -->
+        step="1" <!-- Increment step -->
+        value="1" <!-- Default value -->
+      >
+      <br><br>
+
+      <label>Gender:</label>
+      <input type="radio" name="gender" value="male" id="male" required> <!-- Male radio button -->
+      <label for="male">Male</label>
+      <input type="radio" name="gender" value="female" id="female"> <!-- Female radio button -->
+      <label for="female">Female</label>
+      <br><br>
+
+      <label>Hobbies:</label>
+      <input type="checkbox" name="hobby[]" value="reading" id="reading"> <!-- Reading checkbox -->
+      <label for="reading">Reading</label>
+      <input type="checkbox" name="hobby[]" value="traveling" id="traveling"> <!-- Traveling checkbox -->
+      <label for="traveling">Traveling</label>
+      <br><br>
+
+      <label for="country">Country:</label>
+      <select name="country" id="country" required>
+        <!-- Dropdown menu for country selection -->
+        <option value="" disabled selected>Select your country</option>
+        <option value="india">India</option>
+        <option value="usa">USA</option>
+        <option value="uk">UK</option>
+      </select>
+      <br><br>
+
+      <label for="bio">Biography:</label>
+      <textarea 
+        id="bio"
+        name="bio"
+        rows="4"
+        cols="50"
+        placeholder="Write about yourself"
+        required
+      ></textarea>
+      <br><br>
+
+      <label for="profile_picture">Upload Profile Picture:</label>
+      <input 
+        type="file" <!-- Allows file uploads -->
+        id="profile_picture"
+        name="profile_picture"
+        accept="image/*" <!-- Restricts to image files -->
+      >
+    </fieldset>
+
+    <br>
+
+    <button type="submit">Submit</button> <!-- Submits the form -->
+    <button type="reset">Reset</button> <!-- Resets all form fields -->
+    <br><br>
+
+    <label for="range">Volume:</label>
+    <input 
+      type="range" <!-- Allows selecting a value within a range -->
+      id="range"
+      name="volume"
+      min="0" <!-- Minimum range value -->
+      max="100" <!-- Maximum range value -->
+      step="1" <!-- Increment step -->
+      value="50" <!-- Default range value -->
+      oninput="document.getElementById('volumeValue').value = this.value" <!-- Updates output dynamically -->
+    >
+    <output id="volumeValue">50</output> <!-- Displays the range value -->
+  </form>
+</body>
+</html>
+
+
+-->
