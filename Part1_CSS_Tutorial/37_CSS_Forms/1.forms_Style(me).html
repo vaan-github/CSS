@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>forms</title>
+    <style>
+        div{
+            margin: 20px;
+        }
+     input[type="text"]{
+        margin-bottom: 20px;
+        width: 50%;
+        padding: 20px;
+        box-sizing: border-box;
+        border: 2px solid red;
+        border-radius: 10px;
+        background-color: greenyellow;
+        color: red;
+        background-image: url(search.png);
+        background-size: 40px 40px;
+        background-position: 10px 10px;
+        background-repeat: no-repeat;
+        transition: width 0.4s ease-in-out;
+        padding-left: 60px;
+        font-size: 20px;
+     }
+
+     input[type="text"]:focus{
+     /* background-color: lightblue; */
+     border: 3px solid #555;
+     width:100%;
+     
+
+     }
+
+     textarea{
+        display: block;
+        resize: none;
+        width: 100%;
+        padding: 20px;
+        height: 150px;
+        /* margin: 20px 20px; */
+
+        /* important */
+        box-sizing: border-box;
+        font-size: 20px;
+        border-radius: 10px;
+
+     }
+
+     select ,option{
+        display: block;
+        margin-top: 20px;
+        padding: 20px;
+        font-size: 20px;
+        background-color: aquamarine;
+        border: 2px solid red;
+        border-radius: 10px;
+     }
+
+     input[type="button"],
+     input[type="reset"],
+     input[type="submit"]{
+        margin-top: 20px;
+        padding: 20px;
+        background-color: aquamarine;
+        border: 2px solid red;
+        border-radius: 10px;
+        cursor:pointer;
+        text-decoration: none;
+        font-size: 20px;
+     }
+    </style>
+</head>
+<body>
+    <div>
+    <form action="/submit">
+        <input type="text">
+        <textarea>Some text...</textarea>
+
+        <select name="country" id="country">
+            <option value="au">Australia</option>
+            <option value="ca">Canada</option>
+            <option value="usa">USA</option>
+        </select>
+
+        <input type="button" value="Button">
+        <input type="reset" value="Reset">
+        <input type="submit" value="Submit">
+    </form>
+</div>
+</body>
+</html>
