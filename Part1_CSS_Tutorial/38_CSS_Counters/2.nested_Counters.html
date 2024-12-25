@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nested Counters</title>
+
+    <style>
+        body{
+            /* starts from 0 for the entire document */
+            counter-reset: section;
+        }
+
+        h1{
+            /* reset whenever h1 tag occurs */
+            counter-reset: sub-section;
+        }
+
+        h1::before{
+            counter-increment: section;
+            content: counter(section) ". "
+        }
+
+        h2::before{
+            counter-increment: sub-section;
+            content: counter(section)"."counter(sub-section) " "
+        }
+    </style>
+</head>
+<body>
+    <h1>Hello</h1>
+    <h2>Hi</h2>
+    <h2>Hi</h2>
+    <h2>Hi</h2>
+    <h2>Hi</h2>
+
+    <h1>Konichiwa</h1>
+    <h2>ayo</h2>
+    <h2>ayo</h2>
+    <h2>ayo</h2>
+    <h2>ayo</h2>
+</body>
+</html>
