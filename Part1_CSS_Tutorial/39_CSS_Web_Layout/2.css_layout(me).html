@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Web Layout</title>
+    <style>
+
+        *{
+            box-sizing: border-box;
+        }
+         /* HEADER */
+        .header{
+            text-align: center;
+            padding: 20px;
+            background-color:#a1a1a1;
+        }
+
+
+        /* NAVIGATION BAR */
+        
+        .topnav{
+            background-color: aquamarine;
+            padding: 20px;
+            position: relative;
+            
+        }
+
+        .topnav a{
+            text-decoration: none;
+        }
+
+        .topnav a:not(:last-child){
+            padding: 20px;
+
+        }
+
+        .topnav a:last-child{
+            position: absolute;
+            right: 40px;
+        }
+
+        .topnav a:hover{
+            color:red;
+            font-size: large;
+            /* background-color: azure; */
+        }
+
+
+        /* CONTENT */
+        .column{
+            float: left;
+            width: 33.33%;
+            background-color: #a1a1a1;
+            padding: 15px;
+        }
+
+        .row::after{
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        @media screen and (max-width:600px) {
+       .column {
+        width: 100%;
+         }
+       }
+
+       /* FOOTER */
+       .footer{
+        background-color: bisque;
+        text-align: center;
+        padding: 20px;
+       }
+    </style>
+</head>
+<body>
+    <!-- HEADER -->
+    <div class="header">
+        <h1>Header</h1>
+    </div>
+
+    <!-- NAVIGATION BAR -->
+
+    <div class="topnav">
+        <a href="Home">Home</a>
+        <a href="Contact">Contact</a>
+        <a href="About">About</a>
+    </div>
+
+    <!-- CONTENT -->
+    <div class="row">
+        <div class="column">
+            <h1>Column 1</h1>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, repellendus praesentium. Dolores atque eaque iste optio voluptatum at dolorum non vitae et minima! Libero similique inventore assumenda eveniet. Doloremque ea odit sunt consectetur, earum laudantium optio eaque, quas exercitationem, porro dignissimos repellat ipsa autem aperiam! Earum vitae perferendis dolorem iure accusamus ab id. Alias repellendus dolor provident iusto illum accusamus, voluptas ut nesciunt accusantium unde natus non ne
+            </p>
+        </div>
+        <div class="column">
+            <h1>Column 2</h1>
+            <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusamus fugit ex aliquid modi minima. Ab, ipsa ipsum neque laboriosam labore mollitia totam distinctio quos ipsam commodi exercitationem rem eaque. Eaque aut dolorem ratione in. Cupiditate ipsa recusandae exercitationem ex ducimus, doloribus quo et! Ipsa praesentium iste laboriosam impedit totam cupiditate dolorem, velit non omnis ex quasi expedita obcaecati ullam nisi! Exercitationem accusantium, provident odio id cumque sunt quis facere.
+            </p>
+        </div>
+        <div class="column" >
+            <h1>Column 3</h1>
+            <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Enim esse commodi illum? Est deserunt hic unde voluptates culpa eaque ipsam suscipit reiciendis earum facere dolorum cum repellat, porro nobis! Aspernatur eum quisquam magni inventore sint quam unde rem consequatur ipsum sunt dolor quasi saepe, obcaecati sequi minus, nam est dignissimos, architecto quia provident repellendus voluptatum. Sint, culpa. Molestiae similique ut corrupti iste quibusdam odio officia, minus architecto quasi cupiditate!
+            </p>
+        </div>
+    </div>
+    
+    <!-- FOOTER -->
+    <div class="footer">
+        <h1>Footer</h1>
+    </div>
+
+
+</body>
+</html>

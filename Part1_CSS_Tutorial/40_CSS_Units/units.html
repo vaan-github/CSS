@@ -1,0 +1,69 @@
+<!-- CSS Units -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Units</title>
+</head>
+<body>
+    <h1>0 don't need unit</h1>
+
+    <h1>There are two types of length units: absolute and relative.</h1>
+
+    <br>
+
+    <h1>1. Absolute</h1>
+    <h2>Absolute length units are not recommended for use on screen</h2>
+
+    <h3>
+        1. cm 
+        <br>
+        2. mm 
+        <br>
+        3. in, 1in = 2.54cm 
+        <br>
+        px  , 1px = 1/96 inch
+        <br>
+        pt  , 1pt = 1/72 inch
+        <br>
+        pc  , 1pc = 12pt
+
+        <br>
+        <br>
+        * Pixels (px) are relative to the viewing device. For low-dpi devices, 1px is one device pixel (dot) of the display. For printers and high resolution screens 1px implies multiple device pixels.
+
+    </h3>
+
+    <br>
+    <h1>2. Relative</h1>
+    <h3>
+        1. em : parent font-size times . i.e 2em means 2 times parent font-size. (can cause compounding issue, during nesting.) { if not define then took the parent font size.
+        }
+        <br><br>
+        note: if you set the font size for the current element it wont consider the parent and use yours define font size for em.
+        <br><br>
+        2. ex : 1ex = height of the small letters like a,  b, c (inconsistent since , every devices font size may vary.) { current element font size only}
+        <br><br>
+        3. ch : 1ch equals the width of the "0" character in the current font.
+
+        <br><br>
+        4. rem : Relative to font-size of the root element. (solves the compounding issue in the em during nesting.)
+        <br><br>
+        5. vw : 1vw = 1% of the viewport width.
+        <br><br>
+        6. vh : 1vh = 1% of the viewport height.
+        <br><br>
+        7. vmax : 1vmax = 1% of the largest dimension of the viewpport.
+        <br><br>
+        8. vmin : 1vmin = 1% of the smallest dimension of the viewport.
+        <br><br>
+        9. % : relative to the parent element.
+
+        <br><br>
+        * Viewport = the browser window size. If the viewport is 50cm wide, 1vw = 0.5cm.
+    </h3>
+
+</body>
+</html>
