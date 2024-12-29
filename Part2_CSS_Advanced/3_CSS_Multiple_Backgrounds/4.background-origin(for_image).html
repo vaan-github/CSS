@@ -1,0 +1,35 @@
+<!-- 
+ The CSS background-origin property specifies where the background image is positioned.
+
+The property takes three different values:
+
+1. border-box - the background image starts from the upper left corner of the border
+2. padding-box - (default) the background image starts from the upper left corner of the padding edge
+3. content-box - the background image starts from the upper left corner of the content
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>background-origin</title>
+    <style>
+        div{
+            border: 5px dashed red;
+            padding: 100px;
+            background: url(https://www.w3schools.com/css/img_man.jpg) center/contain no-repeat;
+            /* background-origin: content-box; */
+             /* background-origin: border-box; */
+            background-origin: padding-box; 
+
+        }
+
+    </style>
+</head>
+<body>
+    <div>
+        <p>hello i am </p>
+    </div>
+</body>
+</html>

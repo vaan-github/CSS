@@ -1,0 +1,34 @@
+<!-- 
+ The CSS border-image property allows you to specify an image to be used instead of the normal border around an element.
+
+The property has three parts:
+
+1. The image to use as the border
+2. Where to slice the image
+3. Define whether the middle sections should be repeated or stretched
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Border Image</title>
+    <style>
+        /* 
+        Tip: The border-image property is actually a shorthand property for the border-image-source, border-image-slice, border-image-width, border-image-outset and border-image-repeat properties.
+        */
+        div{
+            border: 15px solid transparent;
+            border-image: url(https://www.w3schools.com/css/border.png) 28 round;
+            /* border-image: url(https://www.w3schools.com/css/border.png) 28 stretch; */
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <p>This is an image</p>
+    </div>
+</body>
+</html>

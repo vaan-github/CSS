@@ -1,0 +1,56 @@
+<!-- 
+ /* Comprehensive Details of Each Property in the 'background' Shorthand */
+
+/* 1. background-color */
+/* Sets the background color of an element. Can use color names, hex codes, RGB, HSL, or transparent. */
+background-color: #ffffff; /* White */
+background-color: rgba(255, 255, 255, 0.5); /* Semi-transparent */
+
+/* 2. background-image */
+/* Sets one or more background images for an element. Use a URL or specify none. */
+background-image: url('image.jpg'); /* Single image */
+background-image: none; /* No background image */
+background-image: url('image1.jpg'), url('image2.jpg'); /* Multiple images */
+
+/* 3. background-position */
+/* Specifies the initial position of the background image. Can use keywords, length, or percentages. */
+background-position: left top; /* Keyword-based positioning */
+background-position: 50% 50%; /* Center */
+background-position: 10px 20px; /* Exact position in pixels */
+
+/* 4. background-size */
+/* Determines the size of the background image. */
+background-size: auto; /* Default: Original image size */
+background-size: cover; /* Scales to cover the container */
+background-size: contain; /* Fits entirely within the container */
+background-size: 100px 50px; /* Custom width and height */
+
+/* 5. background-repeat */
+/* Defines how the background image repeats. */
+background-repeat: repeat; /* Default: Image repeats in both directions */
+background-repeat: repeat-x; /* Repeats horizontally */
+background-repeat: repeat-y; /* Repeats vertically */
+background-repeat: no-repeat; /* No repeating */
+
+/* 6. background-attachment */
+/* Determines if the background image scrolls with the content. */
+background-attachment: scroll; /* Default: Moves with the content */
+background-attachment: fixed; /* Stays fixed relative to the viewport */
+background-attachment: local; /* Scrolls with the element’s content */
+
+/* 7. background-clip */
+/* Specifies the area where the background is painted. */
+background-clip: border-box; /* Default: Background extends to the border */
+background-clip: padding-box; /* Background extends to the padding edge */
+background-clip: content-box; /* Background confined to the content */
+
+/* 8. background-origin */
+/* Determines the positioning area for the background image. */
+background-origin: border-box; /* Default: Position relative to the border */
+background-origin: padding-box; /* Position relative to the padding edge */
+background-origin: content-box; /* Position relative to the content box */
+
+/* Example Combining All */
+background: #ffffff url('image.jpg') center/cover no-repeat fixed padding-box content-box;
+
+-->
